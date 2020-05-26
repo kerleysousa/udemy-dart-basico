@@ -2,24 +2,19 @@ import 'class_carro.dart';
 
 main(){
 
-  var carro = Carro(0, 320);
+  var carro = Carro(0, 280);
   
   while(carro.velocidadeAtual < carro.velocidadeMaxima){
-    carro.acelerar(50);
+    carro.acelerar(10);
     print(carro.velocidadeAtual.toString());
   }
 
   while(carro.velocidadeAtual > 0){
-    carro.frear(10);
+    carro.frear(50);
     print(carro.velocidadeAtual.toString());
   }
 
-  carro.velocidadeAtual = 100;
+  carro.velocidadeAtual = 300;
   print(carro.velocidadeAtual);
 
-  carro.acelerar(50);
-  print(carro.velocidadeAtual);
-  
-  carro.velocidadeAtual = 500;
-  print(carro.velocidadeAtual);
 }
