@@ -1,4 +1,4 @@
-import 'class_carro.dart';
+import '../modelo/class_carro.dart';
 
 main(){
 
