@@ -1,33 +1,35 @@
 class Carro {
-  int velocidade;
+  int _velocidadeAtual;
   final int velocidadeMaxima;
 
-  Carro({this.velocidade = 0, this.velocidadeMaxima = 200});
+  Carro([this._velocidadeAtual = 0, this.velocidadeMaxima = 200]);
 
   int acelerar([int acelerar]){
-    if((velocidade + acelerar) >= velocidadeMaxima){
-      this.velocidade = this.velocidadeMaxima;
+    if((_velocidadeAtual + acelerar) >= velocidadeMaxima){
+      this._velocidadeAtual = this.velocidadeMaxima;
     }else{
-      this.velocidade += acelerar;
+      this._velocidadeAtual += acelerar;
     }
-    return this.velocidade;
+    return this._velocidadeAtual;
   }
 
   int frear([int frear]){
-    if((velocidade - frear) <= 0){
-      this.velocidade = 0;
+    if((_velocidadeAtual - frear) <= 0){
+      this._velocidadeAtual = 0;
     }else{
-      this.velocidade -= frear;
+      this._velocidadeAtual -= frear;
     }
-    return this.velocidade;
+    return this._velocidadeAtual;
   }
 
-  bool carroParado(int velocidade){
-    this.velocidade == 0;
+  int get velocidadeAtual {
+    return this._velocidadeAtual;
   }
 
-  bool carroMovimento(int velocidade){
-    velocidade != 0;
+  void set velocidadeAtual(int novaVelocidade) {
+    if (velocidadeAtual >= 0) {
+      this._velocidadeAtual = novaVelocidade;
+    }
   }
 
 }
