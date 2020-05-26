@@ -1,4 +1,4 @@
-import './pessoa.dart';
+import '../modelo/classe_pessoa.dart';
 
 main(){
   var p1 = Pessoa();
