@@ -29,4 +29,9 @@ main(){
   );
 
   print("O valor total da venda é: ${venda.valorTotal}");
+
+  for(var item in venda.itens){
+    print({item.produto.nome});
+  }
+
 }
